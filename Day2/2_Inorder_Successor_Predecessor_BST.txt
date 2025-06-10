@@ -1,0 +1,14 @@
+vector<int> succPredBST(TreeNode* root,int key){
+			//your code goes here
+            int succ=-1;
+            while(root != NULL){
+                if(key>= root->data){
+                    root=root->right;
+                }else{
+                    succ=root->data;
+                    root=root->left;
+                }
+            }
+            return succ;
+            
+		}
