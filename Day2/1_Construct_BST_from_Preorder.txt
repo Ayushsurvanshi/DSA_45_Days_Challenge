@@ -10,4 +10,4 @@ TreeNode* build(vector<int>& preorder,int& i,int bound){
         return build(preorder,i,INT_MAX);
         
     }
-};
+]
