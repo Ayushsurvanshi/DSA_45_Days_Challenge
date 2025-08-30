@@ -1,4 +1,4 @@
-Problem : Crawler Log Folder 
+Problem 1: Crawler Log Folder 
 
 int minOperations(vector<string>& logs) {
         stack<string>st;
@@ -13,4 +13,26 @@ int minOperations(vector<string>& logs) {
         }
         return st.size();
         
+    }
+
+Problem 2: Basketball game 
+
+int calPoints(vector<string>& operations) {
+       vector<int>st;
+       for(auto op :  operations){
+        if(op=="+"){
+            st.push_back(st.back()+st[st.size()-2]);
+        }else if(op=="D"){
+            st.push_back(2*st.back());
+        }else if(op=="C"){
+            st.pop_back();
+        }else{
+            st.push_back(stoi(op));
+        }
+       }
+       int sum=0;
+       for(auto at : st){
+        sum+=at;
+       }
+       return sum;
     }
