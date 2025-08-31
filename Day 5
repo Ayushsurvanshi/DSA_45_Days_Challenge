@@ -20,5 +20,19 @@ vector<string> uncommonFromSentences(string s1, string s2) {
         return ans;
     }
 
-Problem 2 : 
+Problem 2 : Minimum String Length After Removing Substrings (2696)
+
+int minLength(string s) {
+        stack<char>st;
+        for(auto it: s){
+            if(!st.empty() && ((it=='B' && st.top() =='A')||(it=='D' && st.top()=='C'))){
+                st.pop();
+                
+            }else{
+                st.push(it);
+            }
+        }
+        return st.size();
+        
+    }
 
