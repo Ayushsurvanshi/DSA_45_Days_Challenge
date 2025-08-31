@@ -36,3 +36,25 @@ int minLength(string s) {
         
     }
 
+problem 3: Minimum Add to Make Parentheses Valid (921)
+
+int minAddToMakeValid(string s) {
+        stack<int>st;
+        int count=0;
+        for(auto it: s){
+            if(it=='('){
+                st.push(it);
+            }
+            if(it==')' && !st.empty()){
+                st.pop();
+            }else if(it==')' && st.empty()){
+                count++;
+            }
+        }
+        if(!st.empty()){
+            count+=st.size();
+        }
+        return count;
+        
+    }
+
