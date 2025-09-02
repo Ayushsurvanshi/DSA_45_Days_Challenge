@@ -1,0 +1,13 @@
+Problem : Find Number of Even Number of Digits 
+
+int findNumbers(vector<int>& nums) {
+        int count=0;
+        for(auto it: nums){
+            string n=to_string(it);
+            if(n.size()%2 == 0){
+                count++;
+            }
+        }
+        return count;
+        
+    }
