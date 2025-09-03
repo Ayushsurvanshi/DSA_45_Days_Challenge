@@ -6,7 +6,7 @@ int maxChars(string S) {
     for(int i=0;i<52;i++){
         first[i]=-1;
     }
-    
+
     int maxdistance=-1;
     for(int r=0;r<S.size();r++){
         int ind;
