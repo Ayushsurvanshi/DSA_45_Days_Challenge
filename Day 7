@@ -29,3 +29,23 @@ int findNumbers(vector<int>& nums) {
         return count;
         
     }
+---------------------------------------------------------------------------------------------------
+Problem : Find the Distance Value Between Two Arrays (1385)
+
+int findTheDistanceValue(vector<int>& arr1, vector<int>& arr2, int d) {
+        int count=0;
+        for(auto it : arr1){
+            bool isvalid=true;
+            for(auto x: arr2){
+                if(abs(it-x)<=d){
+                    isvalid=false;
+                    break;
+                }
+            }
+            if(isvalid){
+                count++;
+            }
+        }
+        return count;
+        
+    }
